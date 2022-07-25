@@ -221,13 +221,8 @@ bot.add_cog(Commands(bot))
 async def on_ready():
 
 		# set bot status to online and game it is playing
-		await bot.change_presence(status=discord.Status.online,
-															activity=discord.Activity(
-																	type=discord.ActivityType.playing,
-																	name="League of Legends"))
-		print(
-				'Logged in as:\n{0.user.name}\n{0.user.id}\n*Not affiliated with Riot*'
-				.format(bot))
+		await bot.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.playing, name="League of Legends"))
+		print('Logged in as:\n{0.user.name}\n{0.user.id}\n*Not affiliated with Riot*'.format(bot))
 
 
 bot.run(os.getenv('TOKEN'))
